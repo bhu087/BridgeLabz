@@ -16,7 +16,17 @@ namespace AddressBook
             {
                 int option = int.Parse(Console.ReadLine());
                 AddressBookLogic addressBookLogic = new AddressBookLogic();
-                addressBookLogic.AddContact();
+                switch (option)
+                {
+                    case 1:
+                        addressBookLogic.AddContact();
+                        break;
+                    case 2:
+                        addressBookLogic.DeleteContact();
+                        break;
+                    default:
+                        break;
+                }
             }
             catch(Exception e)
             {

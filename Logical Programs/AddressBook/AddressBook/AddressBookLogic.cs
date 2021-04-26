@@ -29,5 +29,18 @@ namespace AddressBook
             string output = JsonConvert.SerializeObject(AddsList, Formatting.Indented);
             File.WriteAllText(@"I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\AddressJSON.json", output);
         }
+        public void DeleteContact()
+        {
+            int i = 0;
+            foreach (AddressBookObject contacts in AddsObject)
+            {
+                Console.WriteLine("Enter {0} for delete {1}", i, contacts.Name);
+                i += 1;
+            }
+            i = int.Parse(Console.ReadLine());
+            AddsObject.RemoveAt(i);
+            string output = JsonConvert.SerializeObject(AddsList, Formatting.Indented);
+            File.WriteAllText(@"I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\AddressJSON.json", output);
+        }
     }
 }
