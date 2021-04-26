@@ -76,45 +76,51 @@ namespace Tic_Tac_Toe
             int NumberOfTiks = 9;
             Program p = new Program();
             TicTacToeGameOver ticTacToeGameOver = new TicTacToeGameOver();
-            while (NumberOfTiks > 0)
+            Console.WriteLine("Do you want to play/again press N for No or any key for Yes");
+            string Choose = Console.ReadLine().ToLower();
+            while (Choose != "n")
             {
-                ticTacToeGameOver.DisplayFields();
-                if (NumberOfTiks > 0)
+                while (NumberOfTiks > 0)
                 {
-                    NumberOfTiks -= 1;
-                    p.PlayerOne();
-                    if (ticTacToeGameOver.GameCheck())
+                    ticTacToeGameOver.DisplayFields();
+                    if (NumberOfTiks > 0)
                     {
+                        NumberOfTiks -= 1;
+                        p.PlayerOne();
+                        if (ticTacToeGameOver.GameCheck())
+                        {
+                            ticTacToeGameOver.DisplayFields();
+                            Console.WriteLine("User One Wins");
+                            break;
+                        }
                         ticTacToeGameOver.DisplayFields();
-                        Console.WriteLine("User One Wins");
+                    }
+                    else
+                    {
+                        Console.WriteLine("No one Wins");
                         break;
                     }
-                    ticTacToeGameOver.DisplayFields();
-                }
-                else
-                {
-                    Console.WriteLine("No one Wins");
-                    break;
-                }
 
-                if (NumberOfTiks > 0)
-                {
-                    NumberOfTiks -= 1;
-                    p.PlayerTwo();
-                    if (ticTacToeGameOver.GameCheck())
+                    if (NumberOfTiks > 0)
                     {
+                        NumberOfTiks -= 1;
+                        p.PlayerTwo();
+                        if (ticTacToeGameOver.GameCheck())
+                        {
+                            ticTacToeGameOver.DisplayFields();
+                            Console.WriteLine("User Two Wins");
+                            break;
+                        }
                         ticTacToeGameOver.DisplayFields();
-                        Console.WriteLine("User Two Wins");
+                    }
+                    else
+                    {
+                        Console.WriteLine("No one Wins");
                         break;
                     }
-                    ticTacToeGameOver.DisplayFields();
-                }
-                else
-                {
-                    Console.WriteLine("No one Wins");
-                    break;
                 }
             }
+            
             Console.WriteLine("Game Over");
             
         }
