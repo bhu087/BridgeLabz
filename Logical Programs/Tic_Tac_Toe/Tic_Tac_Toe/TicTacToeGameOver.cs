@@ -1,5 +1,5 @@
 ﻿/////------------------------------------------------------------------------
-////<copyright file="Tic_Tac_Toe_GameOver.cs" company="BridgeLabz">
+////<copyright file="TicTacToeGameOver.cs" company="BridgeLabz">
 ////author="Bhushan"
 ////</copyright>
 ////-------------------------------------------------------------------------
@@ -15,7 +15,7 @@ namespace Tic_Tac_Toe
     public class TicTacToeGameOver
     {
         /// <summary>
-        /// Declaring a 3 D array
+        /// Declaring a 3 D Array
         /// </summary>
         public static string[,] Array = new string[3, 3]
         {
@@ -25,7 +25,7 @@ namespace Tic_Tac_Toe
         };
 
         /// <summary>
-        /// Dispaly a current array
+        /// Display a current Array
         /// </summary>
         public void DisplayFields()
         {
@@ -43,6 +43,43 @@ namespace Tic_Tac_Toe
         {
             if ((Array[0, 0].Equals(Array[0, 1]) && Array[0, 0].Equals(Array[0, 2]) && Array[0, 0].Equals("*")) ||
                 (Array[0, 0].Equals(Array[0, 1]) && Array[0, 0].Equals(Array[0, 2]) && Array[0, 0].Equals("0")))
+            {
+                return true;
+            }
+            else if ((Array[1, 0].Equals(Array[1, 1]) && Array[1, 0].Equals(Array[1, 2]) && Array[1, 0].Equals("*")) ||
+                (Array[1, 0].Equals(Array[1, 1]) && Array[1, 0].Equals(Array[1, 2]) && Array[1, 0].Equals("0")))
+            {
+                return true;
+            }
+            else if ((Array[2, 0].Equals(Array[2, 1]) && Array[2, 0].Equals(Array[2, 2]) && Array[2, 0].Equals("*")) ||
+                (Array[2, 0].Equals(Array[2, 1]) && Array[2, 0].Equals(Array[2, 2]) && Array[2, 0].Equals("0")))
+            {
+                return true;
+            }
+            ////*************************************************************************
+            else if ((Array[0, 0].Equals(Array[1, 0]) && Array[0, 0].Equals(Array[2, 0]) && Array[0, 0].Equals("*")) ||
+                (Array[0, 0].Equals(Array[1, 0]) && Array[0, 0].Equals(Array[2, 0]) && Array[0, 0].Equals("0")))
+            {
+                return true;
+            }
+            else if ((Array[0, 1].Equals(Array[1, 1]) && Array[0, 1].Equals(Array[2, 1]) && Array[0, 1].Equals("*")) ||
+                (Array[0, 1].Equals(Array[1, 1]) && Array[0, 1].Equals(Array[2, 1]) && Array[0, 1].Equals("0")))
+            {
+                return true;
+            }
+            else if ((Array[0, 2].Equals(Array[1, 2]) && Array[0, 2].Equals(Array[2, 2]) && Array[0, 2].Equals("*")) ||
+                (Array[0, 2].Equals(Array[1, 2]) && Array[0, 2].Equals(Array[2, 2]) && Array[0, 2].Equals("0")))
+            {
+                return true;
+            }
+            ////*************************************************************************
+            else if ((Array[0, 0].Equals(Array[1, 1]) && Array[0, 0].Equals(Array[2, 2]) && Array[0, 0].Equals("*")) ||
+                (Array[0, 0].Equals(Array[1, 1]) && Array[0, 0].Equals(Array[2, 2]) && Array[0, 0].Equals("0")))
+            {
+                return true;
+            }
+            else if ((Array[0, 2].Equals(Array[1, 1]) && Array[0, 2].Equals(Array[2, 0]) && Array[0, 2].Equals("*")) ||
+                (Array[0, 2].Equals(Array[1, 1]) && Array[0, 2].Equals(Array[2, 0]) && Array[0, 2].Equals("0")))
             {
                 return true;
             }
@@ -93,6 +130,72 @@ namespace Tic_Tac_Toe
                     else
                     {
                         fields[0, 2] = playerSymbol;
+                        return true;
+                    }
+
+                case 3:
+                    if (fields[1, 0].Equals("0") || fields[1, 0].Equals("*"))
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        fields[1, 0] = playerSymbol;
+                        return true;
+                    }
+
+                case 4:
+                    if (fields[1, 1].Equals("0") || fields[1, 1].Equals("*"))
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        fields[1, 1] = playerSymbol;
+                        return true;
+                    }
+
+                case 5:
+                    if (fields[1, 2].Equals("0") || fields[1, 2].Equals("*"))
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        fields[1, 2] = playerSymbol;
+                        return true;
+                    }
+
+                case 6:
+                    if (fields[2, 0].Equals("0") || fields[2, 0].Equals("*"))
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        fields[2, 0] = playerSymbol;
+                        return true;
+                    }
+
+                case 7:
+                    if (fields[2, 1].Equals("0") || fields[2, 1].Equals("*"))
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        fields[2, 1] = playerSymbol;
+                        return true;
+                    }
+
+                case 8:
+                    if (fields[2, 2].Equals("0") || fields[2, 2].Equals("*"))
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        fields[2, 2] = playerSymbol;
                         return true;
                     }
             }
