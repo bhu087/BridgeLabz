@@ -43,6 +43,29 @@ namespace Tic_Tac_Toe
         public void PlayerTwo()
         {
             TicTacToeGameOver ticTacToeGameOver = new TicTacToeGameOver();
+            try
+            {
+                int position = Int32.Parse(Console.ReadLine());
+                if (position > 0 && position < 9)
+                {
+                    bool IsInserted = ticTacToeGameOver.Insert(position, "0");
+                    if (IsInserted == false)
+                    {
+                        Console.WriteLine("Already Place is occupied Please Enter other place");
+                    }
+                    this.PlayerTwo();
+                }
+                else
+                {
+                    Console.WriteLine("Enter a Correct places between 0 to 8");
+                    this.PlayerTwo();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                this.PlayerTwo();
+            }
         }
         public static void Main(string[] args)
         {
@@ -51,9 +74,39 @@ namespace Tic_Tac_Toe
             TicTacToeGameOver ticTacToeGameOver = new TicTacToeGameOver();
             while (NumberOfTiks > 0)
             {
-                NumberOfTiks -= 1;
-                p.PlayerOne();
+                if (NumberOfTiks > 0)
+                {
+                    NumberOfTiks -= 1;
+                    p.PlayerOne();
+                    if (ticTacToeGameOver.GameCheck())
+                    {
+                        Console.WriteLine("User One Wins");
+                        break;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("No one Wins");
+                    break;
+                }
+
+                if (NumberOfTiks > 0)
+                {
+                    NumberOfTiks -= 1;
+                    p.PlayerTwo();
+                    if (ticTacToeGameOver.GameCheck())
+                    {
+                        Console.WriteLine("User Two Wins");
+                        break;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("No one Wins");
+                    break;
+                }
             }
+            Console.WriteLine("Game Over");
             
         }
         
