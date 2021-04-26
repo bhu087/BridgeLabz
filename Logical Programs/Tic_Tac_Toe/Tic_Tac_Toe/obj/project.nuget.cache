@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "HBSovqezNk1UaeRzM7HCAdDvZPDHqHavH314cxBVlHxbu7S/8QYfwf9FZRgcaia3LxAWbYwcHyp8x8qs1jgHbw==",
+  "success": true,
+  "projectFilePath": "I:\\BridgeLabz\\Logical Programs\\Tic_Tac_Toe\\Tic_Tac_Toe\\Tic_Tac_Toe.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bhush_000\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+  ],
+  "logs": []
+}
