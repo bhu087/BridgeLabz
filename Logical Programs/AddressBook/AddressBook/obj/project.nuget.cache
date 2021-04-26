@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZMb6V2LMDii5AEp2AyqCI+5qB3FP/+MsZPcZQorJGL/S7XT5H6H8JO1byiojm/5r0jVwSv1hACt5BFL5mwz3iA==",
+  "success": true,
+  "projectFilePath": "I:\\BridgeLabz\\Logical Programs\\AddressBook\\AddressBook\\AddressBook.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bhush_000\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+  ],
+  "logs": []
+}
