@@ -18,6 +18,11 @@ namespace AddressBook
             string name = Console.ReadLine();
             Console.WriteLine("Enter a Mobile Number");
             long number = long.Parse(Console.ReadLine());
+            if (this.DuplicateNumber(number))
+            {
+                Console.WriteLine("Contact already exixts try with new Number");
+                AddContact();
+            }
             Console.WriteLine("Enter a Company Name");
             string company = Console.ReadLine();
             AddressBookObject addressBookObject = new AddressBookObject{
@@ -68,6 +73,17 @@ namespace AddressBook
             AddsObject.Add(addressBookObject);
             string output = JsonConvert.SerializeObject(AddsList, Formatting.Indented);
             File.WriteAllText(@"I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\AddressJSON.json", output);
+        }
+        public bool DuplicateNumber(long number)
+        {
+            foreach (AddressBookObject contacts in AddsObject)
+            {
+                if (contacts.Name.Equals(number))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
