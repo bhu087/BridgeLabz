@@ -1,13 +1,23 @@
-﻿using System;
-
+﻿/////------------------------------------------------------------------------
+////<copyright file="Program.cs" company="BridgeLabz">
+////author="Bhushan"
+////</copyright>
+////-------------------------------------------------------------------------
 namespace AddressBook
 {
-    class Program
+    /// <summary>
+    /// Starting of the program
+    /// </summary>
+    public class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// Main program
+        /// </summary>
+        /// <param name="args">parameter</param>
+        public static void Main(string[] args)
         {
             AddressBookOperations addressBookOperations = new AddressBookOperations();
-            addressBookOperations.AddressOperationsSelcection();
+            addressBookOperations.AddressOperationsSelection();
         }
     }
 }

@@ -1,12 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿/////------------------------------------------------------------------------
+////<copyright file="AddressBookOperations.cs" company="BridgeLabz">
+////author="Bhushan"
+////</copyright>
+////-------------------------------------------------------------------------
 
 namespace AddressBook
 {
-    class AddressBookOperations
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
+    /// <summary>
+    /// Address book operations
+    /// </summary>
+    public class AddressBookOperations
     {
-        public void AddressOperationsSelcection()
+        /// <summary>
+        /// Address Operations Selection
+        /// </summary>
+        public void AddressOperationsSelection()
         {
             Console.WriteLine("Enter Options");
             Console.WriteLine("1 for Add Person");
@@ -39,7 +51,7 @@ namespace AddressBook
                         break;
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }

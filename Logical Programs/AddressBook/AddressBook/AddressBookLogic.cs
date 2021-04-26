@@ -1,17 +1,39 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-
+﻿/////------------------------------------------------------------------------
+////<copyright file="AddressBookLogic.cs" company="BridgeLabz">
+////author="Bhushan"
+////</copyright>
+////-------------------------------------------------------------------------
 namespace AddressBook
 {
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Text;
+    using Newtonsoft.Json;
+
+    /// <summary>
+    /// Address Book Logic
+    /// </summary>
     class AddressBookLogic
     {
+        /// <summary>
+        /// Address Book read from file
+        /// </summary>
         public static string AddsBook = File.ReadAllText(@"I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\AddressJSON.json");
+        
+        /// <summary>
+        /// Address List Deserialized object
+        /// </summary>
         public static AddressList AddsList = JsonConvert.DeserializeObject<AddressList>(AddsBook);
+
+        /// <summary>
+        /// Address Objects List
+        /// </summary>
         public static List<AddressBookObject> AddsObject = AddsList.AddressBookContents;
 
+        /// <summary>
+        /// Add contact Logic
+        /// </summary>
         public void AddContact()
         {
             Console.WriteLine("Enter a Name");
@@ -21,11 +43,12 @@ namespace AddressBook
             if (this.DuplicateNumber(number))
             {
                 Console.WriteLine("Contact already exixts try with new Number");
-                AddContact();
+                this.AddContact();
             }
+
             Console.WriteLine("Enter a Company Name");
             string company = Console.ReadLine();
-            AddressBookObject addressBookObject = new AddressBookObject{
+            AddressBookObject addressBookObject = new AddressBookObject {
                 Name = name,
                 MobileNumber = number,
                 Company = company
@@ -34,6 +57,10 @@ namespace AddressBook
             string output = JsonConvert.SerializeObject(AddsList, Formatting.Indented);
             File.WriteAllText(@"I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\AddressJSON.json", output);
         }
+
+        /// <summary>
+        /// Delete Contact Logic
+        /// </summary>
         public void DeleteContact()
         {
             int i = 0;
@@ -42,12 +69,16 @@ namespace AddressBook
                 Console.WriteLine("Enter {0} for delete {1}", i, contacts.Name);
                 i += 1;
             }
+
             i = int.Parse(Console.ReadLine());
             AddsObject.RemoveAt(i);
             string output = JsonConvert.SerializeObject(AddsList, Formatting.Indented);
             File.WriteAllText(@"I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\AddressJSON.json", output);
         }
 
+        /// <summary>
+        /// Edit Contact
+        /// </summary>
         public void EditContact()
         {
             int i = 0;
@@ -56,6 +87,7 @@ namespace AddressBook
                 Console.WriteLine("Enter {0} for eidt {1}", i, contacts.Name);
                 i += 1;
             }
+
             i = int.Parse(Console.ReadLine());
             AddsObject.RemoveAt(i);
             Console.WriteLine("Enter Rename");
@@ -74,6 +106,12 @@ namespace AddressBook
             string output = JsonConvert.SerializeObject(AddsList, Formatting.Indented);
             File.WriteAllText(@"I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\AddressJSON.json", output);
         }
+
+        /// <summary>
+        /// Duplicate Number Finder
+        /// </summary>
+        /// <param name="number">Entered Number</param>
+        /// <returns>returns the presence of the Number</returns>
         public bool DuplicateNumber(long number)
         {
             foreach (AddressBookObject contacts in AddsObject)
@@ -83,9 +121,13 @@ namespace AddressBook
                     return true;
                 }
             }
+
             return false;
         }
 
+        /// <summary>
+        /// Print all contacts in Address book
+        /// </summary>
         public void PrintContacts()
         {
             Console.WriteLine("Name \t|\tNumber \t|\tCompany :");
@@ -95,6 +137,9 @@ namespace AddressBook
             }
         }
 
+        /// <summary>
+        /// Sort by Name
+        /// </summary>
         public void SortByName()
         {
             List<string> sortContacts = new List<string>();
@@ -103,6 +148,7 @@ namespace AddressBook
                 string entries = contacts.Name + "\t\t" + contacts.MobileNumber + "\t\t" + contacts.Company;
                 sortContacts.Add(entries);
             }
+
             sortContacts.Sort();
             foreach (string contacts in sortContacts)
             {
