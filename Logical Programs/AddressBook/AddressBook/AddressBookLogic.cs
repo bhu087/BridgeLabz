@@ -42,5 +42,32 @@ namespace AddressBook
             string output = JsonConvert.SerializeObject(AddsList, Formatting.Indented);
             File.WriteAllText(@"I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\AddressJSON.json", output);
         }
+
+        public void EditContact()
+        {
+            int i = 0;
+            foreach (AddressBookObject contacts in AddsObject)
+            {
+                Console.WriteLine("Enter {0} for eidt {1}", i, contacts.Name);
+                i += 1;
+            }
+            i = int.Parse(Console.ReadLine());
+            AddsObject.RemoveAt(i);
+            Console.WriteLine("Enter Rename");
+            string name = Console.ReadLine();
+            Console.WriteLine("Enter new Mobile Number");
+            long number = long.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Company");
+            string company = Console.ReadLine();
+            AddressBookObject addressBookObject = new AddressBookObject
+            {
+                Name = name,
+                MobileNumber = number,
+                Company = company
+            };
+            AddsObject.Add(addressBookObject);
+            string output = JsonConvert.SerializeObject(AddsList, Formatting.Indented);
+            File.WriteAllText(@"I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\AddressJSON.json", output);
+        }
     }
 }

@@ -24,6 +24,9 @@ namespace AddressBook
                     case 2:
                         addressBookLogic.DeleteContact();
                         break;
+                    case 3:
+                        addressBookLogic.EditContact();
+                        break;
                     default:
                         break;
                 }
