@@ -15,6 +15,8 @@ namespace AddressBook
             try
             {
                 int option = int.Parse(Console.ReadLine());
+                AddressBookLogic addressBookLogic = new AddressBookLogic();
+                addressBookLogic.AddContact();
             }
             catch(Exception e)
             {

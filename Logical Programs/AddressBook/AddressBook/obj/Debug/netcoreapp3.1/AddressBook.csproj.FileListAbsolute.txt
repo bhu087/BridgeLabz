@@ -1,0 +1,15 @@
+I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\bin\Debug\netcoreapp3.1\AddressBook.exe
+I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\bin\Debug\netcoreapp3.1\AddressBook.deps.json
+I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\bin\Debug\netcoreapp3.1\AddressBook.runtimeconfig.json
+I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\bin\Debug\netcoreapp3.1\AddressBook.runtimeconfig.dev.json
+I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\bin\Debug\netcoreapp3.1\AddressBook.dll
+I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\bin\Debug\netcoreapp3.1\AddressBook.pdb
+I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\obj\Debug\netcoreapp3.1\AddressBook.csprojAssemblyReference.cache
+I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\obj\Debug\netcoreapp3.1\AddressBook.AssemblyInfoInputs.cache
+I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\obj\Debug\netcoreapp3.1\AddressBook.AssemblyInfo.cs
+I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\obj\Debug\netcoreapp3.1\AddressBook.csproj.CoreCompileInputs.cache
+I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\obj\Debug\netcoreapp3.1\AddressBook.csproj.CopyComplete
+I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\obj\Debug\netcoreapp3.1\AddressBook.dll
+I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\obj\Debug\netcoreapp3.1\AddressBook.pdb
+I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\obj\Debug\netcoreapp3.1\AddressBook.genruntimeconfig.cache

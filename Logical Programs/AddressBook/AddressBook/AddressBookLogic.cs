@@ -1,10 +1,33 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace AddressBook
 {
     class AddressBookLogic
     {
+        public static string AddsBook = File.ReadAllText(@"I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\AddressJSON.json");
+        public static AddressList AddsList = JsonConvert.DeserializeObject<AddressList>(AddsBook);
+        public static List<AddressBookObject> AddsObject = AddsList.AddressBookContents;
+
+        public void AddContact()
+        {
+            Console.WriteLine("Enter a Name");
+            string name = Console.ReadLine();
+            Console.WriteLine("Enter a Mobile Number");
+            long number = long.Parse(Console.ReadLine());
+            Console.WriteLine("Enter a Company Name");
+            string company = Console.ReadLine();
+            AddressBookObject addressBookObject = new AddressBookObject{
+                Name = name,
+                MobileNumber = number,
+                Company = company
+            };
+            AddsObject.Add(addressBookObject);
+            string output = JsonConvert.SerializeObject(AddsList, Formatting.Indented);
+            File.WriteAllText(@"I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\AddressJSON.json", output);
+        }
     }
 }

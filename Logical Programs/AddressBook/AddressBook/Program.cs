@@ -6,7 +6,8 @@ namespace AddressBook
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            AddressBookOperations addressBookOperations = new AddressBookOperations();
+            addressBookOperations.AddressOperationsSelcection();
         }
     }
 }
