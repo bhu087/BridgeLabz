@@ -13,6 +13,7 @@ namespace AddressBook
             Console.WriteLine("2 for Delete Person");
             Console.WriteLine("3 for Edit Person");
             Console.WriteLine("4 for Display Contacts");
+            Console.WriteLine("5 for sorted display");
             try
             {
                 int option = int.Parse(Console.ReadLine());
@@ -30,6 +31,9 @@ namespace AddressBook
                         break;
                     case 4:
                         addressBookLogic.PrintContacts();
+                        break;
+                    case 5:
+                        addressBookLogic.SortByName();
                         break;
                     default:
                         break;

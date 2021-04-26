@@ -94,5 +94,20 @@ namespace AddressBook
                 Console.WriteLine("{0}\t\t{1}\t\t{2}", contacts.Name, contacts.MobileNumber, contacts.Company);
             }
         }
+
+        public void SortByName()
+        {
+            List<string> sortContacts = new List<string>();
+            foreach (AddressBookObject contacts in AddsObject)
+            {
+                string entries = contacts.Name + "\t\t" + contacts.MobileNumber + "\t\t" + contacts.Company;
+                sortContacts.Add(entries);
+            }
+            sortContacts.Sort();
+            foreach (string contacts in sortContacts)
+            {
+                Console.WriteLine(contacts);
+            }
+        }
     }
 }
