@@ -18,15 +18,17 @@ namespace Tic_Tac_Toe
             TicTacToeGameOver ticTacToeGameOver = new TicTacToeGameOver();
             try
             {
+                Console.WriteLine("Enter a position");
                 int position = Int32.Parse(Console.ReadLine());
-                if (position > 0 && position < 9)
+                if (position >= 0 && position < 9)
                 {
                     bool IsInserted = ticTacToeGameOver.Insert(position, "*");
                     if (IsInserted == false)
                     {
                         Console.WriteLine("Already Place is occupied Please Enter other place");
+                        this.PlayerOne();
                     }
-                    this.PlayerOne();
+                    
                 }
                 else
                 {
@@ -45,15 +47,17 @@ namespace Tic_Tac_Toe
             TicTacToeGameOver ticTacToeGameOver = new TicTacToeGameOver();
             try
             {
+                Console.WriteLine("Enter a position");
                 int position = Int32.Parse(Console.ReadLine());
-                if (position > 0 && position < 9)
+                if (position >= 0 && position < 9)
                 {
                     bool IsInserted = ticTacToeGameOver.Insert(position, "0");
                     if (IsInserted == false)
                     {
                         Console.WriteLine("Already Place is occupied Please Enter other place");
+                        this.PlayerTwo();
                     }
-                    this.PlayerTwo();
+                    
                 }
                 else
                 {
@@ -74,15 +78,18 @@ namespace Tic_Tac_Toe
             TicTacToeGameOver ticTacToeGameOver = new TicTacToeGameOver();
             while (NumberOfTiks > 0)
             {
+                ticTacToeGameOver.DisplayFields();
                 if (NumberOfTiks > 0)
                 {
                     NumberOfTiks -= 1;
                     p.PlayerOne();
                     if (ticTacToeGameOver.GameCheck())
                     {
+                        ticTacToeGameOver.DisplayFields();
                         Console.WriteLine("User One Wins");
                         break;
                     }
+                    ticTacToeGameOver.DisplayFields();
                 }
                 else
                 {
@@ -96,9 +103,11 @@ namespace Tic_Tac_Toe
                     p.PlayerTwo();
                     if (ticTacToeGameOver.GameCheck())
                     {
+                        ticTacToeGameOver.DisplayFields();
                         Console.WriteLine("User Two Wins");
                         break;
                     }
+                    ticTacToeGameOver.DisplayFields();
                 }
                 else
                 {

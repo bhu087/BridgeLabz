@@ -30,6 +30,7 @@ namespace Tic_Tac_Toe
         public void DisplayFields()
         {
             string[,] fields = Array;
+            Console.Clear();
             Console.WriteLine("{0} | {1} | {2}", fields[0, 0], fields[0, 1], fields[0, 2]);
             Console.WriteLine("{0} | {1} | {2}", fields[1, 0], fields[1, 1], fields[1, 2]);
             Console.WriteLine("{0} | {1} | {2}", fields[2, 0], fields[2, 1], fields[2, 2]);
