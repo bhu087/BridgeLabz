@@ -1,0 +1,13 @@
+I:\BridgeLabz\Logical Programs\Tic_Tac_Toe\Tic_Tac_Toe\bin\Debug\netcoreapp3.1\Tic_Tac_Toe.exe
+I:\BridgeLabz\Logical Programs\Tic_Tac_Toe\Tic_Tac_Toe\bin\Debug\netcoreapp3.1\Tic_Tac_Toe.deps.json
+I:\BridgeLabz\Logical Programs\Tic_Tac_Toe\Tic_Tac_Toe\bin\Debug\netcoreapp3.1\Tic_Tac_Toe.runtimeconfig.json
+I:\BridgeLabz\Logical Programs\Tic_Tac_Toe\Tic_Tac_Toe\bin\Debug\netcoreapp3.1\Tic_Tac_Toe.runtimeconfig.dev.json
+I:\BridgeLabz\Logical Programs\Tic_Tac_Toe\Tic_Tac_Toe\bin\Debug\netcoreapp3.1\Tic_Tac_Toe.dll
+I:\BridgeLabz\Logical Programs\Tic_Tac_Toe\Tic_Tac_Toe\bin\Debug\netcoreapp3.1\Tic_Tac_Toe.pdb
+I:\BridgeLabz\Logical Programs\Tic_Tac_Toe\Tic_Tac_Toe\obj\Debug\netcoreapp3.1\Tic_Tac_Toe.csprojAssemblyReference.cache
+I:\BridgeLabz\Logical Programs\Tic_Tac_Toe\Tic_Tac_Toe\obj\Debug\netcoreapp3.1\Tic_Tac_Toe.AssemblyInfoInputs.cache
+I:\BridgeLabz\Logical Programs\Tic_Tac_Toe\Tic_Tac_Toe\obj\Debug\netcoreapp3.1\Tic_Tac_Toe.AssemblyInfo.cs
+I:\BridgeLabz\Logical Programs\Tic_Tac_Toe\Tic_Tac_Toe\obj\Debug\netcoreapp3.1\Tic_Tac_Toe.csproj.CoreCompileInputs.cache
+I:\BridgeLabz\Logical Programs\Tic_Tac_Toe\Tic_Tac_Toe\obj\Debug\netcoreapp3.1\Tic_Tac_Toe.dll
+I:\BridgeLabz\Logical Programs\Tic_Tac_Toe\Tic_Tac_Toe\obj\Debug\netcoreapp3.1\Tic_Tac_Toe.pdb
+I:\BridgeLabz\Logical Programs\Tic_Tac_Toe\Tic_Tac_Toe\obj\Debug\netcoreapp3.1\Tic_Tac_Toe.genruntimeconfig.cache

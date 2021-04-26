@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "I:\\BridgeLabz\\Logical Programs\\Tic_Tac_Toe\\Tic_Tac_Toe\\Tic_Tac_Toe.csproj",
-      "projectName": "Tic_Tac_Toe",
-      "projectPath": "I:\\BridgeLabz\\Logical Programs\\Tic_Tac_Toe\\Tic_Tac_Toe\\Tic_Tac_Toe.csproj",
+      "projectUniqueName": "I:\\BridgeLabz\\Logical Programs\\Tic_Tac_Toe\\Tic_Tac_Toe\\TicTacToe.csproj",
+      "projectName": "TicTacToe",
+      "projectPath": "I:\\BridgeLabz\\Logical Programs\\Tic_Tac_Toe\\Tic_Tac_Toe\\TicTacToe.csproj",
       "packagesPath": "C:\\Users\\bhush_000\\.nuget\\packages\\",
       "outputPath": "I:\\BridgeLabz\\Logical Programs\\Tic_Tac_Toe\\Tic_Tac_Toe\\obj\\",
       "projectStyle": "PackageReference",

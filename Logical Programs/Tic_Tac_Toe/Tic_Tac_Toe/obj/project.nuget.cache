@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HBSovqezNk1UaeRzM7HCAdDvZPDHqHavH314cxBVlHxbu7S/8QYfwf9FZRgcaia3LxAWbYwcHyp8x8qs1jgHbw==",
+  "dgSpecHash": "MdCVyyeCxoC/3XvYmzlE4NaIcgfYn29wX/p10rgxskBRK8l5ReNTSdshiH0JkvREas0uUncX7g9nta8hge2CRg==",
   "success": true,
-  "projectFilePath": "I:\\BridgeLabz\\Logical Programs\\Tic_Tac_Toe\\Tic_Tac_Toe\\Tic_Tac_Toe.csproj",
+  "projectFilePath": "I:\\BridgeLabz\\Logical Programs\\Tic_Tac_Toe\\Tic_Tac_Toe\\TicTacToe.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bhush_000\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
   ],
