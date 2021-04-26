@@ -13,22 +13,83 @@ namespace Tic_Tac_Toe
     /// </summary>
     public class Program
     {
+        /// <summary>
+        /// Main program
+        /// </summary>
+        /// <param name="args">Main control Within this</param>
+        public static void Main(string[] args)
+        {
+            int numberOfTiks = 9;
+            Program p = new Program();
+            TicTacToeGameOver ticTacToeGameOver = new TicTacToeGameOver();
+            Console.WriteLine("Do you want to play/again press N for No or any key for Yes");
+            string choose = Console.ReadLine().ToLower();
+            while (choose != "n")
+            {
+                while (numberOfTiks > 0)
+                {
+                    ticTacToeGameOver.DisplayFields();
+                    if (numberOfTiks > 0)
+                    {
+                        numberOfTiks -= 1;
+                        p.PlayerOne();
+                        if (ticTacToeGameOver.GameCheck())
+                        {
+                            ticTacToeGameOver.DisplayFields();
+                            Console.WriteLine("User One Wins");
+                            break;
+                        }
+
+                        ticTacToeGameOver.DisplayFields();
+                    }
+                    else
+                    {
+                        Console.WriteLine("No one Wins");
+                        break;
+                    }
+
+                    if (numberOfTiks > 0)
+                    {
+                        numberOfTiks -= 1;
+                        p.PlayerTwo();
+                        if (ticTacToeGameOver.GameCheck())
+                        {
+                            ticTacToeGameOver.DisplayFields();
+                            Console.WriteLine("User Two Wins");
+                            break;
+                        }
+
+                        ticTacToeGameOver.DisplayFields();
+                    }
+                    else
+                    {
+                        Console.WriteLine("No one Wins");
+                        break;
+                    }
+                }
+            }
+            
+            Console.WriteLine("Game Over");
+        }
+
+        /// <summary>
+        /// player One Control
+        /// </summary>
         public void PlayerOne()
         {
             TicTacToeGameOver ticTacToeGameOver = new TicTacToeGameOver();
             try
             {
                 Console.WriteLine("Enter a position");
-                int position = Int32.Parse(Console.ReadLine());
+                int position = int.Parse(Console.ReadLine());
                 if (position >= 0 && position < 9)
                 {
-                    bool IsInserted = ticTacToeGameOver.Insert(position, "*");
-                    if (IsInserted == false)
+                    bool isInserted = ticTacToeGameOver.Insert(position, "*");
+                    if (isInserted == false)
                     {
                         Console.WriteLine("Already Place is occupied Please Enter other place");
                         this.PlayerOne();
                     }
-                    
                 }
                 else
                 {
@@ -42,22 +103,25 @@ namespace Tic_Tac_Toe
                 this.PlayerOne();
             }
         }
+
+        /// <summary>
+        /// Player Two Conditions
+        /// </summary>
         public void PlayerTwo()
         {
             TicTacToeGameOver ticTacToeGameOver = new TicTacToeGameOver();
             try
             {
                 Console.WriteLine("Enter a position");
-                int position = Int32.Parse(Console.ReadLine());
+                int position = int.Parse(Console.ReadLine());
                 if (position >= 0 && position < 9)
                 {
-                    bool IsInserted = ticTacToeGameOver.Insert(position, "0");
-                    if (IsInserted == false)
+                    bool isInserted = ticTacToeGameOver.Insert(position, "0");
+                    if (isInserted == false)
                     {
                         Console.WriteLine("Already Place is occupied Please Enter other place");
                         this.PlayerTwo();
                     }
-                    
                 }
                 else
                 {
@@ -71,59 +135,5 @@ namespace Tic_Tac_Toe
                 this.PlayerTwo();
             }
         }
-        public static void Main(string[] args)
-        {
-            int NumberOfTiks = 9;
-            Program p = new Program();
-            TicTacToeGameOver ticTacToeGameOver = new TicTacToeGameOver();
-            Console.WriteLine("Do you want to play/again press N for No or any key for Yes");
-            string Choose = Console.ReadLine().ToLower();
-            while (Choose != "n")
-            {
-                while (NumberOfTiks > 0)
-                {
-                    ticTacToeGameOver.DisplayFields();
-                    if (NumberOfTiks > 0)
-                    {
-                        NumberOfTiks -= 1;
-                        p.PlayerOne();
-                        if (ticTacToeGameOver.GameCheck())
-                        {
-                            ticTacToeGameOver.DisplayFields();
-                            Console.WriteLine("User One Wins");
-                            break;
-                        }
-                        ticTacToeGameOver.DisplayFields();
-                    }
-                    else
-                    {
-                        Console.WriteLine("No one Wins");
-                        break;
-                    }
-
-                    if (NumberOfTiks > 0)
-                    {
-                        NumberOfTiks -= 1;
-                        p.PlayerTwo();
-                        if (ticTacToeGameOver.GameCheck())
-                        {
-                            ticTacToeGameOver.DisplayFields();
-                            Console.WriteLine("User Two Wins");
-                            break;
-                        }
-                        ticTacToeGameOver.DisplayFields();
-                    }
-                    else
-                    {
-                        Console.WriteLine("No one Wins");
-                        break;
-                    }
-                }
-            }
-            
-            Console.WriteLine("Game Over");
-            
-        }
-        
     }
 }
