@@ -85,5 +85,14 @@ namespace AddressBook
             }
             return false;
         }
+
+        public void PrintContacts()
+        {
+            Console.WriteLine("Name \t|\tNumber \t|\tCompany :");
+            foreach (AddressBookObject contacts in AddsObject)
+            {
+                Console.WriteLine("{0}\t\t{1}\t\t{2}", contacts.Name, contacts.MobileNumber, contacts.Company);
+            }
+        }
     }
 }
