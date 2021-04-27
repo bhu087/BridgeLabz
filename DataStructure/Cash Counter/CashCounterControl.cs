@@ -20,8 +20,9 @@ namespace Cash_Counter
                 Console.WriteLine("Enter 2 for service is Over to customer");
                 Console.WriteLine("Enter 3 Size of Counter");
                 Console.WriteLine("Enter 4 Is Counter Empty");
-                Console.WriteLine("Enter 5 to stop the service");
                 Console.WriteLine("Enter 6 for Display Customers in Queue");
+                Console.WriteLine("Enter 7 for Give Service to Customer");
+                Console.WriteLine("Enter 5 to stop the service");
                 try
                 {
                     int option = int.Parse(Console.ReadLine());
@@ -81,6 +82,9 @@ namespace Cash_Counter
                             break;
                         case 6:
                             cashCounterLogic.DisplayCustomers();
+                            break;
+                        case 7:
+                            cashCounterLogic.ServiceToCustomer("Deposit");
                             break;
                         default:
                             break;

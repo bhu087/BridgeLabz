@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cash_Counter.UtilityForFileOperations;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -79,8 +80,10 @@ namespace Cash_Counter
 
         public string ServiceToCustomer(string serviceType)
         {
+            AccountControl accountControl = new AccountControl();
             if (serviceType.Equals("Deposit"))
             {
+                bool status = accountControl.UpdateBalance(123456789,1000);
                 return "Deposited";
             }
             if (serviceType.Equals("Withdraw"))

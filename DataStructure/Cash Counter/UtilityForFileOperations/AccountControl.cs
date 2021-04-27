@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -34,6 +35,21 @@ namespace Cash_Counter.UtilityForFileOperations
                 IsRegisteredCustomer = false
             };
             return customerDetails;
+        }
+
+        public bool UpdateBalance(long accountNumber, int amount)
+        {
+            foreach (AccountFormat account in accountFormat)
+            {
+                if (account.AccountNumber == accountNumber)
+                {
+                    account.Balance = account.Balance + amount;
+                    string output = JsonConvert.SerializeObject(accountList, Formatting.Indented);
+                    File.WriteAllText(@"I:\BridgeLabz\DataStructure\Cash Counter\Accounts\AccountList.json",output);
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
