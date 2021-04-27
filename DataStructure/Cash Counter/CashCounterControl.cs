@@ -105,6 +105,10 @@ namespace Cash_Counter
                                         Console.WriteLine("You Dont Have Sufficient Balance");
                                     }
                                 }
+                                if (serviceOption == 3)
+                                {
+                                    cashCounterLogic.ServiceToCustomer("Balance");
+                                }
                             }
                             catch (Exception e)
                             {

@@ -39,7 +39,6 @@ namespace Cash_Counter.UtilityForFileOperations
 
         public bool UpdateBalance(long accountNumber, int amount)
         {
-            dynamic jsonObj = JsonConvert.DeserializeObject(AccountFile);
             foreach (AccountFormat account in accountFormat)
             {
                 if (account.AccountNumber == accountNumber)
@@ -51,7 +50,14 @@ namespace Cash_Counter.UtilityForFileOperations
                     //break;
                     account.Balance = account.Balance + amount;
                     string output = JsonConvert.SerializeObject(accountList, Formatting.Indented);
-                    File.WriteAllText(@"I:\BridgeLabz\DataStructure\Cash Counter\Accounts\AccountList.json",output);
+                    try
+                    {
+                        File.WriteAllText(@"I:\BridgeLabz\DataStructure\Cash Counter\Accounts\AccountList.json", output);
+                    }
+                    catch (Exception e)
+                    {
+
+                    }
                     return true;
                 }
             }
