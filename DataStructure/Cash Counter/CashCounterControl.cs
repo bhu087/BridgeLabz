@@ -1,12 +1,24 @@
-﻿using Cash_Counter.UtilityForFileOperations;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿/////------------------------------------------------------------------------
+////<copyright file="CashCounterControl.cs" company="BridgeLabz">
+////author="Bhushan"
+////</copyright>
+////-------------------------------------------------------------------------
 
 namespace Cash_Counter
 {
-    class CashCounterControl
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using Cash_Counter.UtilityForFileOperations;
+
+    /// <summary>
+    /// Cash Counter control
+    /// </summary>
+    public class CashCounterControl
     {
+        /// <summary>
+        /// control method
+        /// </summary>
         public void CounterControl()
         {
             CashCounterLogic cashCounterLogic = new CashCounterLogic();
@@ -41,6 +53,7 @@ namespace Cash_Counter
                                 Console.WriteLine(e.Message);
                                 return;
                             }
+
                             customerDetails = accountControl.GetCustomer(accountNumber);
                             if (customerDetails.IsRegisteredCustomer)
                             {
@@ -59,6 +72,7 @@ namespace Cash_Counter
                             {
                                 Console.WriteLine("No Customers Registered with this ID");
                             }
+
                             break;
                         case 2:
                             cashCounterLogic.DeleteFromQueue();
@@ -76,6 +90,7 @@ namespace Cash_Counter
                             {
                                 Console.WriteLine("Queue is Not Empty");
                             }
+
                             break;
                         case 5:
                             isStop = 5;
@@ -89,6 +104,7 @@ namespace Cash_Counter
                                 Console.WriteLine("Queue is Empty");
                                 break;
                             }
+
                             Console.WriteLine("Enter 1 for Deposit\nEnter 2 for Withdraw\nEnter 3 for Balance Enquire");
                             try 
                             {
@@ -97,6 +113,7 @@ namespace Cash_Counter
                                 {
                                     string depositStatus = cashCounterLogic.ServiceToCustomer("Deposit");
                                 }
+
                                 if (serviceOption == 2)
                                 {
                                     string withdrawStatus = cashCounterLogic.ServiceToCustomer("Withdraw");
@@ -105,6 +122,7 @@ namespace Cash_Counter
                                         Console.WriteLine("You Dont Have Sufficient Balance");
                                     }
                                 }
+
                                 if (serviceOption == 3)
                                 {
                                     cashCounterLogic.ServiceToCustomer("Balance");
@@ -114,6 +132,7 @@ namespace Cash_Counter
                             {
                                 Console.WriteLine(e.Message);
                             }
+
                             break;
                         default:
                             break;
@@ -121,10 +140,9 @@ namespace Cash_Counter
                 }
                 catch (Exception e)
                 {
-
+                    Console.WriteLine(e.Message);
                 }
             }
-            
         }
     }
 }

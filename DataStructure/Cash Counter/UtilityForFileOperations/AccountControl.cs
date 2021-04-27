@@ -1,24 +1,49 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
+﻿/////------------------------------------------------------------------------
+////<copyright file="AccountControl.cs" company="BridgeLabz">
+////author="Bhushan"
+////</copyright>
+////-------------------------------------------------------------------------
 
 namespace Cash_Counter.UtilityForFileOperations
 {
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Text;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Linq;
+
+    /// <summary>
+    /// Account Control Class
+    /// </summary>
     class AccountControl
     {
-        public static string AccountFile = File.ReadAllText(@"I:\BridgeLabz\DataStructure\Cash Counter\Accounts\AccountList.json");
-        public static AccountList accountList = JsonConvert.DeserializeObject<AccountList>(AccountFile);
-        public static List<AccountFormat> accountFormat = accountList.Accounts;
+        /// <summary>
+        /// account details in file format
+        /// </summary>
+        private static string accountFile = File.ReadAllText(@"I:\BridgeLabz\DataStructure\Cash Counter\Accounts\AccountList.json");
 
-        public CustomerDetails GetCustomer(long AccountNumber)
+        /// <summary>
+        /// deserialize the object
+        /// </summary>
+        private static AccountList accountList = JsonConvert.DeserializeObject<AccountList>(accountFile);
+
+        /// <summary>
+        /// List of Accounts
+        /// </summary>
+        private static List<AccountFormat> accountFormat = accountList.Accounts;
+
+        /// <summary>
+        /// Gets the customer Details
+        /// </summary>
+        /// <param name="accountNumber">Account number of customer</param>
+        /// <returns>Customer Model</returns>
+        public CustomerDetails GetCustomer(long accountNumber)
         {
             CustomerDetails customerDetails;
             foreach (AccountFormat account in accountFormat)
             {
-                if (account.AccountNumber == AccountNumber)
+                if (account.AccountNumber == accountNumber)
                 {
                     customerDetails = new CustomerDetails
                     {
@@ -30,6 +55,7 @@ namespace Cash_Counter.UtilityForFileOperations
                     return customerDetails;
                 }
             }
+
             customerDetails = new CustomerDetails
             {
                 IsRegisteredCustomer = false
@@ -37,6 +63,12 @@ namespace Cash_Counter.UtilityForFileOperations
             return customerDetails;
         }
 
+        /// <summary>
+        /// Update the balance of front customer in Queue
+        /// </summary>
+        /// <param name="accountNumber">Account number of Customer</param>
+        /// <param name="amount">Name of customer</param>
+        /// <returns>returns status</returns>
         public bool UpdateBalance(long accountNumber, int amount)
         {
             foreach (AccountFormat account in accountFormat)
@@ -56,8 +88,9 @@ namespace Cash_Counter.UtilityForFileOperations
                     }
                     catch (Exception e)
                     {
-
+                        Console.WriteLine(e.Message);
                     }
+
                     return true;
                 }
             }
