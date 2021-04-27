@@ -44,9 +44,9 @@ namespace Cash_Counter
                             customerDetails = accountControl.GetCustomer(accountNumber);
                             if (customerDetails.IsRegisteredCustomer)
                             {
-                                if (!cashCounterLogic.IsCustomerInQueue(customerDetails.Name))
+                                if (!cashCounterLogic.IsCustomerInQueue(customerDetails.AccountNumber))
                                 {
-                                    cashCounterLogic.AddToQueue(customerDetails.Name);
+                                    cashCounterLogic.AddToQueue(customerDetails.Name, customerDetails.AccountNumber, customerDetails.Balance);
                                     Console.WriteLine("{0} Added to Queue", customerDetails.Name);
                                 }
                                 else
@@ -84,7 +84,27 @@ namespace Cash_Counter
                             cashCounterLogic.DisplayCustomers();
                             break;
                         case 7:
-                            cashCounterLogic.ServiceToCustomer("Deposit");
+                            Console.WriteLine("Enter 1 for Deposit\nEnter 2 for Withdraw\nEnter 3 for Balance Enquire");
+                            try 
+                            {
+                                int serviceOption = int.Parse(Console.ReadLine());
+                                if (serviceOption == 1)
+                                {
+                                    cashCounterLogic.ServiceToCustomer("Deposit");
+                                }
+                                if (serviceOption == 2)
+                                {
+                                    cashCounterLogic.ServiceToCustomer("Withdraw");
+                                }
+                                else
+                                {
+                                    cashCounterLogic.ServiceToCustomer("Balance");
+                                }
+                            }
+                            catch (Exception e)
+                            {
+                                Console.WriteLine(e.Message);
+                            }
                             break;
                         default:
                             break;
