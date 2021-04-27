@@ -6,7 +6,8 @@ namespace Cash_Counter
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            CashCounterControl cashCounterControl = new CashCounterControl();
+            cashCounterControl.CounterControl();
         }
     }
 }

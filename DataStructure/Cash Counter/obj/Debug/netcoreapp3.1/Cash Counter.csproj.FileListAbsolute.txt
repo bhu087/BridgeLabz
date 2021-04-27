@@ -1,0 +1,13 @@
+I:\BridgeLabz\DataStructure\Cash Counter\bin\Debug\netcoreapp3.1\Cash Counter.exe
+I:\BridgeLabz\DataStructure\Cash Counter\bin\Debug\netcoreapp3.1\Cash Counter.deps.json
+I:\BridgeLabz\DataStructure\Cash Counter\bin\Debug\netcoreapp3.1\Cash Counter.runtimeconfig.json
+I:\BridgeLabz\DataStructure\Cash Counter\bin\Debug\netcoreapp3.1\Cash Counter.runtimeconfig.dev.json
+I:\BridgeLabz\DataStructure\Cash Counter\bin\Debug\netcoreapp3.1\Cash Counter.dll
+I:\BridgeLabz\DataStructure\Cash Counter\bin\Debug\netcoreapp3.1\Cash Counter.pdb
+I:\BridgeLabz\DataStructure\Cash Counter\obj\Debug\netcoreapp3.1\Cash Counter.csprojAssemblyReference.cache
+I:\BridgeLabz\DataStructure\Cash Counter\obj\Debug\netcoreapp3.1\Cash Counter.AssemblyInfoInputs.cache
+I:\BridgeLabz\DataStructure\Cash Counter\obj\Debug\netcoreapp3.1\Cash Counter.AssemblyInfo.cs
+I:\BridgeLabz\DataStructure\Cash Counter\obj\Debug\netcoreapp3.1\Cash Counter.csproj.CoreCompileInputs.cache
+I:\BridgeLabz\DataStructure\Cash Counter\obj\Debug\netcoreapp3.1\Cash Counter.dll
+I:\BridgeLabz\DataStructure\Cash Counter\obj\Debug\netcoreapp3.1\Cash Counter.pdb
+I:\BridgeLabz\DataStructure\Cash Counter\obj\Debug\netcoreapp3.1\Cash Counter.genruntimeconfig.cache
