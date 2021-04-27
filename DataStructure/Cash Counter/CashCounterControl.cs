@@ -26,8 +26,18 @@ namespace Cash_Counter
                         
                         break;
                     case 3:
+                        Console.WriteLine("Size of Queue is {0}", cashCounterLogic.SizeOfCounter());
                         break;
                     case 4:
+                        bool status = cashCounterLogic.IsEmpty();
+                        if (status == true)
+                        {
+                            Console.WriteLine("Queue is empty");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Queue is Not Empty");
+                        }
                         break;
                     default:
                         break;
