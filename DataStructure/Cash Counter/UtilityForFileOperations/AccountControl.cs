@@ -16,7 +16,7 @@ namespace Cash_Counter.UtilityForFileOperations
     /// <summary>
     /// Account Control Class
     /// </summary>
-    class AccountControl
+    public class AccountControl
     {
         /// <summary>
         /// account details in file format

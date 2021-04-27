@@ -14,15 +14,15 @@ namespace Cash_Counter
     /// <summary>
     /// Cash Counter Logic
     /// </summary>
-    class CashCounterLogic
+    public class CashCounterLogic
     {
-        public Node Head;
+        private Node Head;
 
         /// <summary>
         /// Create a new Node
         /// </summary>
         /// <returns>return New Node</returns>
-        public Node CreateQueue()
+        private Node CreateQueue()
         {
             return Head;
         }
