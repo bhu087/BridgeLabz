@@ -39,16 +39,23 @@ namespace Cash_Counter.UtilityForFileOperations
 
         public bool UpdateBalance(long accountNumber, int amount)
         {
+            dynamic jsonObj = JsonConvert.DeserializeObject(AccountFile);
             foreach (AccountFormat account in accountFormat)
             {
                 if (account.AccountNumber == accountNumber)
                 {
+                    //balance = account.Balance + amount;
+                    //jsonObj["Accounts"][i]["Balance"] = balance;
+                    //string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Formatting.Indented);
+                    //File.WriteAllText(@"I:\BridgeLabz\DataStructure\Cash Counter\Accounts\AccountList.json", output);
+                    //break;
                     account.Balance = account.Balance + amount;
                     string output = JsonConvert.SerializeObject(accountList, Formatting.Indented);
                     File.WriteAllText(@"I:\BridgeLabz\DataStructure\Cash Counter\Accounts\AccountList.json",output);
                     return true;
                 }
             }
+            
             return false;
         }
     }

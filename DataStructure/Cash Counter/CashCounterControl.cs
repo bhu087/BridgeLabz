@@ -105,11 +105,6 @@ namespace Cash_Counter
                                         Console.WriteLine("You Dont Have Sufficient Balance");
                                     }
                                 }
-                                else
-                                {
-                                    customerDetails = accountControl.GetCustomer(customerDetails.AccountNumber);
-                                    Console.WriteLine("your balance is {0}", customerDetails.Balance);
-                                }
                             }
                             catch (Exception e)
                             {

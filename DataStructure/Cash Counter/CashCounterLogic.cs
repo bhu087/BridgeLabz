@@ -84,7 +84,6 @@ namespace Cash_Counter
             Node current = head;
             Console.WriteLine("Service is giving to {0}", current.Name);
             AccountControl accountControl = new AccountControl();
-            CustomerDetails customerDetails = new CustomerDetails();
             if (serviceType.Equals("Deposit"))
             {
                 Console.WriteLine("Enter a Amount to deposit");
@@ -99,6 +98,7 @@ namespace Cash_Counter
                 }
                 bool status = accountControl.UpdateBalance(current.AccountNumber, amount);
                 this.DeleteFromQueue();
+                Console.WriteLine("Updated Balance is {0}", current.Balance + amount);
                 return "Deposited";
             }
             if (serviceType.Equals("Withdraw"))
@@ -112,6 +112,7 @@ namespace Cash_Counter
                         bool status = accountControl.UpdateBalance(current.AccountNumber, (-requiredAmount));
                         this.DeleteFromQueue();
                         Console.WriteLine("Collect your Cash " + requiredAmount);
+                        Console.WriteLine("Updated balance is {0}", current.Balance - requiredAmount);
                         return "Withdraw";
                     }
                     else
@@ -127,6 +128,7 @@ namespace Cash_Counter
             }
             else
             {
+                Console.WriteLine("Your balance is {0}", current.Balance);
                 this.DeleteFromQueue();
                 return null;
             }
