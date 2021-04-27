@@ -13,3 +13,11 @@ I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\obj\Debug\netcoreapp3.1\A
 I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\obj\Debug\netcoreapp3.1\AddressBook.dll
 I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\obj\Debug\netcoreapp3.1\AddressBook.pdb
 I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\obj\Debug\netcoreapp3.1\AddressBook.genruntimeconfig.cache
+I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.dll
+I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.pdb
+I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\bin\Debug\netcoreapp3.1\nunit.engine.dll
+I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\bin\Debug\netcoreapp3.1\nunit.engine.api.dll
+I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\bin\Debug\netcoreapp3.1\nunit.engine.core.dll
+I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\bin\Debug\netcoreapp3.1\Microsoft.DotNet.InternalAbstractions.dll
+I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\bin\Debug\netcoreapp3.1\nunit.framework.dll
+I:\BridgeLabz\Logical Programs\AddressBook\AddressBook\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll

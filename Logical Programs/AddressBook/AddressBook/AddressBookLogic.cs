@@ -14,7 +14,7 @@ namespace AddressBook
     /// <summary>
     /// Address Book Logic
     /// </summary>
-    class AddressBookLogic
+    public class AddressBookLogic
     {
         /// <summary>
         /// Address Book read from file
@@ -116,7 +116,7 @@ namespace AddressBook
         {
             foreach (AddressBookObject contacts in AddsObject)
             {
-                if (contacts.Name.Equals(number))
+                if (contacts.MobileNumber.Equals(number))
                 {
                     return true;
                 }
