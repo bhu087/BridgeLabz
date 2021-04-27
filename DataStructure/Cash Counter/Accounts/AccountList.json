@@ -1,0 +1,14 @@
+{
+  "Accounts": [
+    {
+      "Name": "Bhushan",
+      "AccountNumber": 123456789,
+      "Balance": 1280
+    },
+    {
+      "Name": "Bhushan kumar",
+      "AccountNumber": 1234512345,
+      "Balance": 1280
+    }
+  ]
+}

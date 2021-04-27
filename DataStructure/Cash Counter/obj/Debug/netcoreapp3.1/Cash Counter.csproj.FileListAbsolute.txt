@@ -11,3 +11,5 @@ I:\BridgeLabz\DataStructure\Cash Counter\obj\Debug\netcoreapp3.1\Cash Counter.cs
 I:\BridgeLabz\DataStructure\Cash Counter\obj\Debug\netcoreapp3.1\Cash Counter.dll
 I:\BridgeLabz\DataStructure\Cash Counter\obj\Debug\netcoreapp3.1\Cash Counter.pdb
 I:\BridgeLabz\DataStructure\Cash Counter\obj\Debug\netcoreapp3.1\Cash Counter.genruntimeconfig.cache
+I:\BridgeLabz\DataStructure\Cash Counter\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+I:\BridgeLabz\DataStructure\Cash Counter\obj\Debug\netcoreapp3.1\Cash Counter.csproj.CopyComplete

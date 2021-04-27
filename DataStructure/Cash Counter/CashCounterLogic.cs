@@ -28,6 +28,71 @@ namespace Cash_Counter
             currentNode.Next = tempNode;
             return true;
         }
+
+        public bool DeleteFromQueue()
+        {
+            Node currentNode = head;
+            if (head == null)
+            {
+                return false;
+            }
+            head = currentNode.Next;
+            return true;
+        }
+
+        public void DisplayCustomers()
+        {
+            Node currentNode = head;
+            if (IsEmpty())
+            {
+                return;
+            }
+            while (currentNode.Next != null)
+            {
+                Console.WriteLine(currentNode.Data);
+                currentNode = currentNode.Next;
+            }
+            Console.WriteLine(currentNode.Data);
+        }
+
+        public bool IsCustomerInQueue(string name)
+        {
+            Node current = head;
+            if (IsEmpty())
+            {
+                return false;
+            }
+            while (current.Next != null)
+            {
+                if (current.Data == name)
+                {
+                    return true;
+                }
+                current = current.Next;
+            }
+            if (current.Data == name)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public string ServiceToCustomer(string serviceType)
+        {
+            if (serviceType.Equals("Deposit"))
+            {
+                return "Deposited";
+            }
+            if (serviceType.Equals("Withdraw"))
+            {
+                return "over";
+            }
+            else
+            {
+                return "Balance";
+            }
+        }
+
         public int SizeOfCounter()
         {
             if (this.IsEmpty())

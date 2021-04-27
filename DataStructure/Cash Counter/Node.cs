@@ -6,12 +6,12 @@ namespace Cash_Counter
 {
     class Node
     {
-        public Object Data;
+        public string Data;
         public Node Next;
 
-        public Node(object Data)
+        public Node(string name)
         {
-            Data = this.Data;
+            Data = name;
         }
     }
 }
