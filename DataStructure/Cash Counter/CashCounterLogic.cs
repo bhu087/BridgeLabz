@@ -13,10 +13,10 @@ namespace Cash_Counter
             return head;
         }
 
-        public bool AddToQueue(string name)
+        public bool AddToQueue(string name, long accountNumber, int balance)
         {
             Node currentNode = head;
-            Node tempNode = new Node(name);
+            Node tempNode = new Node(name, accountNumber, balance);
             if (head == null)
             {
                 head = tempNode;
@@ -50,13 +50,13 @@ namespace Cash_Counter
             }
             while (currentNode.Next != null)
             {
-                Console.WriteLine(currentNode.Data);
+                Console.WriteLine(currentNode.Name);
                 currentNode = currentNode.Next;
             }
-            Console.WriteLine(currentNode.Data);
+            Console.WriteLine(currentNode.Name);
         }
 
-        public bool IsCustomerInQueue(string name)
+        public bool IsCustomerInQueue(long accountNumber)
         {
             Node current = head;
             if (IsEmpty())
@@ -65,13 +65,13 @@ namespace Cash_Counter
             }
             while (current.Next != null)
             {
-                if (current.Data == name)
+                if (current.AccountNumber == accountNumber)
                 {
                     return true;
                 }
                 current = current.Next;
             }
-            if (current.Data == name)
+            if (current.AccountNumber == accountNumber)
             {
                 return true;
             }
@@ -80,20 +80,57 @@ namespace Cash_Counter
 
         public string ServiceToCustomer(string serviceType)
         {
+
+            Node current = head;
+            Console.WriteLine("Service is giving to {0}", current.Name);
             AccountControl accountControl = new AccountControl();
+            CustomerDetails customerDetails = new CustomerDetails();
             if (serviceType.Equals("Deposit"))
             {
-                bool status = accountControl.UpdateBalance(123456789,1000);
+                Console.WriteLine("Enter a Amount to deposit");
+                int amount = 0;
+                try
+                {
+                    amount = int.Parse(Console.ReadLine());
+                }
+                catch (Exception e) 
+                {
+                    Console.WriteLine(e.Message);
+                }
+                bool status = accountControl.UpdateBalance(current.AccountNumber, amount);
+                this.DeleteFromQueue();
                 return "Deposited";
             }
             if (serviceType.Equals("Withdraw"))
             {
-                return "over";
+                Console.WriteLine("Enter How much amount You want");
+                try
+                {
+                    int requiredAmount = int.Parse(Console.ReadLine());
+                    if (current.Balance >= requiredAmount )
+                    {
+                        bool status = accountControl.UpdateBalance(current.AccountNumber, (-requiredAmount));
+                        this.DeleteFromQueue();
+                        Console.WriteLine("Collect your Cash " + requiredAmount);
+                        return "Withdraw";
+                    }
+                    else
+                    {
+                        this.DeleteFromQueue();
+                        return "Insufficient Balance";
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
             }
             else
             {
-                return "Balance";
+                this.DeleteFromQueue();
+                return null;
             }
+            return null;
         }
 
         public int SizeOfCounter()

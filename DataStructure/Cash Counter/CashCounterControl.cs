@@ -84,21 +84,31 @@ namespace Cash_Counter
                             cashCounterLogic.DisplayCustomers();
                             break;
                         case 7:
+                            if (cashCounterLogic.IsEmpty())
+                            {
+                                Console.WriteLine("Queue is Empty");
+                                break;
+                            }
                             Console.WriteLine("Enter 1 for Deposit\nEnter 2 for Withdraw\nEnter 3 for Balance Enquire");
                             try 
                             {
                                 int serviceOption = int.Parse(Console.ReadLine());
                                 if (serviceOption == 1)
                                 {
-                                    cashCounterLogic.ServiceToCustomer("Deposit");
+                                    string depositStatus = cashCounterLogic.ServiceToCustomer("Deposit");
                                 }
                                 if (serviceOption == 2)
                                 {
-                                    cashCounterLogic.ServiceToCustomer("Withdraw");
+                                    string withdrawStatus = cashCounterLogic.ServiceToCustomer("Withdraw");
+                                    if (withdrawStatus.Equals("Insufficient Balance"))
+                                    {
+                                        Console.WriteLine("You Dont Have Sufficient Balance");
+                                    }
                                 }
                                 else
                                 {
-                                    cashCounterLogic.ServiceToCustomer("Balance");
+                                    customerDetails = accountControl.GetCustomer(customerDetails.AccountNumber);
+                                    Console.WriteLine("your balance is {0}", customerDetails.Balance);
                                 }
                             }
                             catch (Exception e)
