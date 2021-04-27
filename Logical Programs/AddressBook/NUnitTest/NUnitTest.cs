@@ -18,7 +18,7 @@ namespace NUnitTest
         /// Test case one for duplicate number
         /// </summary>
         [Test]
-        public void Test1()
+        public void GivenNumberIfExist_WhenCheckAddressBook_ShouldReturnFalse()
         {
             var addressBook = new AddressBookLogic();
             bool result = addressBook.DuplicateNumber(123456789);
