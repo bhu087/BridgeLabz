@@ -1,0 +1,13 @@
+I:\BridgeLabz\NewTikTacToe\TikTacToeGame\bin\Debug\netcoreapp3.1\TikTacToeGame.exe
+I:\BridgeLabz\NewTikTacToe\TikTacToeGame\bin\Debug\netcoreapp3.1\TikTacToeGame.deps.json
+I:\BridgeLabz\NewTikTacToe\TikTacToeGame\bin\Debug\netcoreapp3.1\TikTacToeGame.runtimeconfig.json
+I:\BridgeLabz\NewTikTacToe\TikTacToeGame\bin\Debug\netcoreapp3.1\TikTacToeGame.runtimeconfig.dev.json
+I:\BridgeLabz\NewTikTacToe\TikTacToeGame\bin\Debug\netcoreapp3.1\TikTacToeGame.dll
+I:\BridgeLabz\NewTikTacToe\TikTacToeGame\bin\Debug\netcoreapp3.1\TikTacToeGame.pdb
+I:\BridgeLabz\NewTikTacToe\TikTacToeGame\obj\Debug\netcoreapp3.1\TikTacToeGame.AssemblyInfoInputs.cache
+I:\BridgeLabz\NewTikTacToe\TikTacToeGame\obj\Debug\netcoreapp3.1\TikTacToeGame.AssemblyInfo.cs
+I:\BridgeLabz\NewTikTacToe\TikTacToeGame\obj\Debug\netcoreapp3.1\TikTacToeGame.csproj.CoreCompileInputs.cache
+I:\BridgeLabz\NewTikTacToe\TikTacToeGame\obj\Debug\netcoreapp3.1\TikTacToeGame.dll
+I:\BridgeLabz\NewTikTacToe\TikTacToeGame\obj\Debug\netcoreapp3.1\TikTacToeGame.pdb
+I:\BridgeLabz\NewTikTacToe\TikTacToeGame\obj\Debug\netcoreapp3.1\TikTacToeGame.genruntimeconfig.cache
+I:\BridgeLabz\NewTikTacToe\TikTacToeGame\obj\Debug\netcoreapp3.1\TikTacToeGame.csprojAssemblyReference.cache

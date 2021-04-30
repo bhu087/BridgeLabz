@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToe", "TicTacToe.csproj", "{A5051C1C-EC30-4009-A37E-C3ADF67138F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTest", "..\NUnitTest\NUnitTest.csproj", "{E5EAF2DB-408D-4553-AAFA-09FFAEC284EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUnitTest", "..\NUnitTest\NUnitTest.csproj", "{E5EAF2DB-408D-4553-AAFA-09FFAEC284EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TikTacToeGame", "..\TikTacToeGame\TikTacToeGame.csproj", "{C54F10FA-C6B3-471D-AFB3-2B4CF3E9BDA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{E5EAF2DB-408D-4553-AAFA-09FFAEC284EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5EAF2DB-408D-4553-AAFA-09FFAEC284EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5EAF2DB-408D-4553-AAFA-09FFAEC284EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C54F10FA-C6B3-471D-AFB3-2B4CF3E9BDA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C54F10FA-C6B3-471D-AFB3-2B4CF3E9BDA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C54F10FA-C6B3-471D-AFB3-2B4CF3E9BDA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C54F10FA-C6B3-471D-AFB3-2B4CF3E9BDA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
