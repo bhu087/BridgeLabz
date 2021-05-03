@@ -11,7 +11,7 @@ namespace TikTacToeGame
             DisplayFields();
             while (totalTics > 0 )
             {
-                if (totalTics > 0 && !GameCheck())
+                if (totalTics > 0)
                 {
                     UserPlay();
                     totalTics--;
@@ -22,7 +22,7 @@ namespace TikTacToeGame
                         break;
                     }
                 }
-                if (totalTics > 0 && !GameCheck())
+                if (totalTics > 0)
                 {
                     CompPlay();
                     totalTics--;
